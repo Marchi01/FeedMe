@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FeedMe - Wallet</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #3a7bd5, #00d084);
+      font-family: Arial, sans-serif;
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      text-align: center;
+      padding: 1.5rem 0;
+    }
+	-size: 20rem;
+	
+	header h1 {
+      font-size: 15rem;
+    }
+	
+    .wallet {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .wallet-card {
+      background: white;
+      color: #333;
+      margin: 1rem;
+      padding: 1rem 2rem;
+      border-radius: 10px;
+      width: 500px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s;
+    }
+    .wallet-card:hover {
+      transform: translateY(-5px);
+    }
+    .wallet-card h3 {
+      margin: 0;
+    }
+    .wallet-card .coins {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #00d084;
+    }
+    a {
+      color: #00d084;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Il tuo Wallet</h1>
+  </header>
+  <div class="wallet">
+    <div class="wallet-card">
+      <h3>Ristorante Bella Tavola</h3>
+      <div class="coins">10 FeedCoin</div>
+    </div>
+    <div class="wallet-card">
+      <h3>Museo delle Belle Arti</h3>
+      <div class="coins">5 FeedCoin</div>
+    </div>
+    <div class="wallet-card">
+      <h3>Hotel Luxury</h3>
+      <div class="coins">8 FeedCoin</div>
+    </div>
+	<div class="wallet-card">
+      <h3>Palestra Fitness</h3>
+      <div class="coins">1 FeedCoin</div>
+    </div>
+	<div class="wallet-card">
+      <h3>Cinema Star</h3>
+      <div class="coins">17 FeedCoin</div>
+    </div>
+	<div class="wallet-card">
+      <h3>Parrucchiere Style</h3>
+      <div class="coins">5 FeedCoin</div>
+    </div>
+	<div class="wallet-card">
+      <h3>Negozio di Abbigliamento</h3>
+      <div class="coins">23 FeedCoin</div>
+    </div>
+  </div>
+</body>
+</html>

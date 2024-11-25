@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FeedMe - Lascia una Recensione</title>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    // Funzione per ottenere il parametro azienda dalla URL
+    function getAzienda() {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get('azienda');
+    }
+
+    // Mostrare il nome dell'azienda selezionata nella pagina di recensione
+    window.onload = function() {
+      const azienda = getAzienda();
+      if (azienda) {
+        document.getElementById('azienda-nome').textContent = azienda;
+      }
+    }
+  </script>
+  
+  
+  
+  
+</head>
+<body>
+
+  <header>
+   <h1>FeedMe</h1>
+  </header>
+
+  <main class="review-container">
+    <div class="review-form">
+      <h2>Lascia la tua Recensione</h2>
+      <p>Aiutaci a migliorare il nostro servizio. Scrivi la tua recensione per <span id="azienda-nome">[Nome Azienda]</span> e ottieni FeedCoin!</p>
+
+
+
+  
+      <form action="wallet.html" method="POST">
+		<div class="form-group">
+          <label for="personale">Personale</label>
+          <input type="number" id="personale" name="personale" min="1" max="5" placeholder="Valuta il personale (1-5)" required />
+        </div>
+		<div class="form-group">
+          <label for="ambiente">Locazione</label>
+          <input type="number" id="ambiente" name="ambiente" min="1" max="5" placeholder="Valuta l'ambiente (1-5)" required />
+        </div>
+        <div class="form-group">
+          <label for="prezzi">Prezzi</label>
+          <input type="number" id="prezzi" name="prezzi" min="1" max="5" placeholder="Valuta i prezzi (1-5)" required />
+        </div>
+		<div class="form-group">
+          <label for="ambiente">Disponibilità prodotti</label>
+          <input type="number" id="ambiente" name="ambiente" min="1" max="5" placeholder="Valuta l'ambiente (1-5)" required />
+        </div>
+        <div class="form-group">
+          <label for="qualita">Qualità prodotto</label>
+          <input type="number" id="qualita" name="qualita" min="1" max="5" placeholder="Valuta la qualità (1-5)" required />
+        </div>
+        <div class="form-group">
+          <label for="ambiente">Servizio clienti</label>
+          <input type="number" id="ambiente" name="ambiente" min="1" max="5" placeholder="Valuta l'ambiente (1-5)" required />
+        </div>
+		<div class="form-group">
+          <label for="ambiente">Velocità servizio</label>
+          <input type="number" id="ambiente" name="ambiente" min="1" max="5" placeholder="Valuta l'ambiente (1-5)" required />
+        </div>
+
+        <div class="form-group">
+          <label for="pulizia">Pulizia</label>
+          <input type="number" id="pulizia" name="pulizia" min="1" max="5" placeholder="Valuta la pulizia (1-5)" required />
+        </div>
+
+        <div class="form-group">
+          <label for="sostenibilita">Sostenibilità</label>
+          <input type="number" id="sostenibilita" name="sostenibilita" min="1" max="5" placeholder="Valuta la sostenibilità (1-5)" required />
+        </div>
+
+        <button type="submit" class="btn-submit">Invia Recensione</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 FeedMe - Tutti i diritti riservati</p>
+  </footer>
+
+</body>
+</html>
+
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body e struttura di base */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  padding: 0;
+  margin: 0;
+}
+
+/* Header con logo */
+header {
+  color:white;
+  background-color: #6a00d7;
+  padding: 20px;
+  text-align: center;
+}
+
+header .logo img {
+  width: 150px;
+}
+
+/* Contenitore principale della recensione */
+.review-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 20px;
+}
+
+/* Form di recensione */
+.review-form {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  padding: 30px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.review-form h2 {
+  font-size: 2rem;
+  color: #6a00d7;
+  margin-bottom: 20px;
+}
+
+.review-form p {
+  font-size: 1rem;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+/* Stile dei campi di input */
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.form-group input, .form-group select {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus, .form-group select:focus {
+  border-color: #00d084;
+  outline: none;
+}
+
+button {
+  background-color: #00d084;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #00b169;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #6a00d7;
+  color: white;
+}
+
+footer p {
+  font-size: 1rem;
+}
+
+/* Animazione per il form */
+.review-form:hover {
+  transform: translateY(-10px);
+}
+</style>

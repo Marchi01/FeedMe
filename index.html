@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FeedMe - Recensisci, Guadagna, Esplora</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Corpo */
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #6a00d7, #00d084);
+      color: white;
+      min-height: 200vh; /* Pagina lunga per abilitare lo scrolling */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow-x: hidden;
+    }
+
+    /* Header */
+    header {
+      width: 100%;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 15rem;
+      background: linear-gradient(90deg, #00d084, #6a00d7);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 4rem;
+      color: #e0e0e0;
+    }
+
+    /* Mockup del telefono */
+    .phone-mockup {
+     
+      bottom: 20px;
+      position: center
+      transform: translateX(-50%);
+      width: 400px;
+      height: 300px;
+      background: #1c1c1c;
+      border-radius: 40px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      transition: all 0.5s ease;
+      z-index: 10;
+    }
+
+    .phone-mockup img {
+      width: 90%;
+      transition: transform 0.5s ease;
+    }
+
+    /* Stato ingrandito del telefono */
+    .phone-mockup.large {
+      width: 100vw;
+      height: 100vh;
+      bottom: 0;
+      left: 0;
+      border-radius: 0;
+      transform: translateX(0);
+    }
+
+    .phone-mockup.large img {
+      width: 100%;
+      transform: scale(1);
+    }
+
+    /* Call-to-Action */
+    .cta {
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    .cta h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .cta p {
+      font-size: rem;
+      color: #e0e0e0;
+      margin-bottom: 20px;
+    }
+
+    .cta button {
+      padding: 15px 30px;
+      font-size: 2rem;
+      border: none;
+      border-radius: 30px;
+      background: linear-gradient(90deg, #00d084, #6a00d7);
+      color: white;
+      cursor: pointer;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .cta button:hover {
+      background: linear-gradient(90deg, #6a00d7, #00d084);
+      transform: translateY(-5px);
+    }
+
+    /* Footer */
+    footer {
+  margin-top: 10;
+  margin-bottom: 20px;    /* Aggiungi margine inferiore per lo spazio dal fondo */
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+
+    footer a {
+      color: #00d084;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+	.btn-register {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50;  /* Colore di sfondo verde */
+  color: white;               /* Colore del testo */
+  text-align: center;
+  text-decoration: none;      /* Rimuove la sottolineatura */
+  font-size: 16px;
+  border-radius: 5px;         /* Rende gli angoli arrotondati */
+  transition: background-color 0.3s ease;  /* Effetto di transizione al passaggio del mouse */
+}
+
+.btn-register:hover {
+  background-color: #45a049;  /* Colore più scuro quando il mouse passa sopra */
+}
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <br><br>
+	<h1>FeedMe</h1>
+	<br>
+    <p>Recensisci, Guadagna FeedCoin, Esplora il mondo!</p>
+  </header>
+
+ 
+
+  <!-- Sezione Call-to-Action -->
+  <div class="cta">
+    <h2>Unisciti a FeedMe oggi!</h2>
+	<br>
+    <p>Recensisci i tuoi luoghi preferiti, accumula FeedCoin e scopri offerte esclusive.</p>
+    <a href="register.html" class="btn-register">Registrati</a>
+  </div>
+<br>
+  <!-- Footer -->
+  <footer>
+    <p>Hai già un account? <a href="login.html">Accedi qui</a></p>
+  </footer>
+
+ <!-- Mockup del Telefono -->
+  <div class="phone-mockup" id="phoneMockup">
+    <div class="phone-content">
+  <div class="features">
+    <div class="feature">
+	<span class="icon" style="font-size: 2rem;">📋</span>
+  <h3 style="color: #00d084;"> Consulenze personalizzate</h3>
+  <p style="color: #e0e0e0;">Ricevi suggerimenti e recensioni su misura per te</p>
+</div>
+<div class="feature">
+ <span class="icon" style="font-size: 2rem">💰</span>
+  <h3 style="color: #6a00d7;">FeedCoin</h3>
+  <p style="color: #f0f0f0;">Guadagna token ad ogni recensione e usali per sconti e premi</p>
+</div>
+<div class="feature">
+<span class="icon" style="font-size: 2rem">🔄</span>
+  <h3 style="color: #0084ff;">Transizioni</h3>
+  <p style="color: #e0e0e0;">Effettua scambi in modo rapido e sicuro con i tuoi amici</p>
+</div>
+<div class="feature">
+<span class="icon" style="font-size: 2rem">👛</span>
+  <h3 style="color: #ff0078;">Wallet</h3>
+  <p style="color: #f0f0f0;">Tieni traccia dei tuoi FeedCoin e controlla il tuo saldo in tempo reale</p>
+</div>
+<div class="feature">
+<span class="icon" style="font-size: 2rem">🎁</span>
+  <h3 style="color: #ffa500;">Benefit</h3>
+  <p style="color: #f0f0f0;">Accedi a offerte esclusive e vantaggi delle tue aziende preferite</p>
+</div>
+  </div>
+</div>
+
+<style>
+  
+  /* Testo delle funzionalità */
+  .feature h3 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg, #00d084, #6a00d7); /* Effetto gradiente */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .feature p {
+    font-size: 1rem;
+    color: #e0e0e0; /* Colore secondario */
+    margin-top: 5px;
+  }
+
+.icon {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+  .phone-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+  }
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 150%;          /* Imposta la larghezza al 150% */
+  margin-left: -25%;    /* Sposta a sinistra per centrare il 150% */
+  margin-right: -25%;   /* Aggiungi margine a destra per compensare */
+  max-width: 1200px;    /* Imposta una larghezza massima */
+}
+
+  .feature {
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+
+  .feature:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  .feature h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg, #00d084, #6a00d7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .feature p {
+    font-size: 1rem;
+    color: #f0f0f0;
+  }
+
+  /* Animazioni */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+
+  </div>
+  
+  <!-- Script per l'animazione -->
+  <script>
+    const phoneMockup = document.getElementById('phoneMockup');
+
+    window.addEventListener('scroll', () => {
+      const scrollPosition = window.scrollY;
+      const windowHeight = window.innerHeight;
+
+      // Aggiungi la classe "large" quando scroll > metà altezza dello schermo
+      if (scrollPosition > windowHeight / 2) {
+        phoneMockup.classList.add('large');
+      } else {
+        phoneMockup.classList.remove('large');
+      }
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+

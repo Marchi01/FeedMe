@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FeedMe - Home</title>
+  <style>
+    /* Global Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Corpo della pagina */
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #f4f4f4;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    /* Intestazione */
+    header {
+      background: linear-gradient(135deg, #00d084, #6a00d7);
+      color: white;
+      width: 100%;
+      padding: 40px 0;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      font-size: 2.5rem;
+      letter-spacing: 2px;
+    }
+
+    header h1 {
+	  font-size: 8rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      background: -webkit-linear-gradient(#00d084, #6a00d7);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Contenuto delle aziende */
+    .company-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 50px;
+      padding: 0 20px;
+    }
+
+    .company-card {
+      width: 250px;
+      height: 350px;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .company-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .company-card .info {
+      padding: 20px;
+    }
+
+    .company-card h3 {
+      font-size: 1.4rem;
+      color: #6a00d7;
+    }
+
+    .company-card p {
+      font-size: 1rem;
+      color: #777;
+      margin-top: 10px;
+      line-height: 1.5;
+    }
+
+    .company-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Pulsante di recensione */
+    .company-card .review-button {
+      background-color: #00d084;
+      color: white;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      margin-top: 15px;
+      transition: background-color 0.3s ease;
+    }
+
+    .company-card .review-button:hover {
+      background-color: #6a00d7;
+    }
+
+    /* Effetto di caricamento */
+    .loading {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #6a00d7;
+      animation: loading 1.5s infinite;
+    }
+
+    @keyframes loading {
+      0% { opacity: 0; }
+      50% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.05);
+      color: #333;
+      width: 100%;
+    }
+
+    footer a {
+      text-decoration: none;
+      color: #6a00d7;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+	.btn-register {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50;  /* Colore di sfondo verde */
+  color: white;               /* Colore del testo */
+  text-align: center;
+  text-decoration: none;      /* Rimuove la sottolineatura */
+  font-size: 16px;
+  border-radius: 5px;         /* Rende gli angoli arrotondati */
+  transition: background-color 0.3s ease;  /* Effetto di transizione al passaggio del mouse */
+}
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <h1>FeedMe</h1>
+    <p>Esplora, Recensisci e Guadagna FeedCoin!</p>
+  </header>
+  <!-- Footer con collegamento alla pagina Wallet -->
+  <footer>
+    <p>Vuoi vedere i tuoi FeedCoin? <a href="wallet.html">Vai al Wallet</a></p>
+  </footer>
+  <!-- Sezione Aziende -->
+  <div class="company-list">
+    <!-- Azienda 1: Ristorante -->
+    <div class="company-card">
+      <img src="https://via.placeholder.com/250x150?text=Ristorante" alt="Ristorante">
+      <div class="info">
+        <h3>Ristorante Bella Tavola</h3>
+        <p>Gusta piatti prelibati in un ambiente elegante e accogliente.</p>
+       <a href="recensione.html?azienda=Ristorante Bella Tavola" class="company-box">Recensisci</a>
+      </div>
+    </div>
+
+    <!-- Azienda 2: Museo -->
+    <div class="company-card">
+      <img src="https://via.placeholder.com/250x150?text=Museo" alt="Museo">
+      <div class="info">
+        <h3>Museo delle Belle Arti</h3>
+        <p>Scopri opere d'arte straordinarie e la storia culturale locale.</p>
+		<a href="recensione.html?azienda=Museo delle Belle Arti" class="company-box">Recensisci</a>      </div>
+    </div>
+
+    <!-- Azienda 3: Negozio Tech -->
+    <div class="company-card">
+      <img src="https://via.placeholder.com/250x150?text=Negozio" alt="Negozio Tech">
+      <div class="info">
+        <h3>Negozio Tech</h3>
+        <p>Acquista gli ultimi gadget tecnologici a prezzi competitivi.</p>
+        <a href="recensione.html?azienda=Negozio Tech" class="company-box">Recensisci</a>
+      </div>
+    </div>
+
+    <!-- Azienda 4: Hotel Luxury -->
+    <div class="company-card">
+      <img src="https://via.placeholder.com/250x150?text=Hotel" alt="Hotel Luxury">
+      <div class="info">
+        <h3>Hotel Luxury</h3>
+        <p>Un'esperienza unica con camere eleganti e servizio impeccabile.</p>
+        <a href="recensione.html?azienda=Hotel Luxury" class="company-box">Recensisci</a>
+      </div>
+    </div>
+
+    <!-- Azienda 5: Palestra Fitness -->
+    <div class="company-card">
+      <img src="https://via.placeholder.com/250x150?text=Palestra" alt="Palestra Fitness">
+      <div class="info">
+        <h3>Palestra Fitness</h3>
+        <p>Raggiungi i tuoi obiettivi fitness con attrezzature all'avanguardia.</p>
+        <a href="recensione.html?azienda=Palestra Fitness" class="company-box">Recensisci</a>
+      </div>
+    </div>
+
+    <!-- Azienda 6: Libreria Moderna -->
+    <div class="company-card">
+      <img src="https://via.placeholder.com/250x150?text=Libreria" alt="Libreria Moderna">
+      <div class="info">
+        <h3>Libreria Moderna</h3>
+        <p>Un'ampia selezione di libri di ogni genere, per tutti i gusti.</p>
+       <a href="recensione.html?azienda=Libreria Moderna" class="company-box">Recensisci</a>
+      </div>
+    </div>
+
+    <!-- Azienda 7: Cinema Star -->
+    <div class="company-card">
+      <img src="https://via.placeholder.com/250x150?text=Cinema" alt="Cinema Star">
+      <div class="info">
+        <h3>Cinema Star</h3>
+        <p>Guarda i tuoi film preferiti con audio e video di alta qualità.</p>
+        <a href="recensione.html?azienda=Cinema Star" class="company-box">Recensisci</a>
+      </div>
+    </div>
+
+    <!-- Azienda 8: Parrucchiere Style -->
+    <div class="company-card">
+      <img src="https://via.placeholder.com/250x150?text=Parrucchiere" alt="Parrucchiere Style">
+      <div class="info">
+        <h3>Parrucchiere Style</h3>
+        <p>Tagli e trattamenti personalizzati per ogni tipo di capello.</p>
+        <a href="recensione.html?azienda=Parrucchiere Style" class="company-box">Recensisci</a>
+      </div>
+    </div>
+
+    <!-- Azienda 9: Bar Caffè -->
+    <div class="company-card">
+      <img src="https://via.placeholder.com/250x150?text=Bar" alt="Bar Caffè">
+      <div class="info">
+        <h3>Bar Caffè</h3>
+        <p>Goditi un caffè di alta qualità in un'atmosfera accogliente.</p>
+        <a href="recensione.html?azienda=Bar Caffè" class="company-box">Recensisci</a>
+      </div>
+    </div>
+
+    <!-- Azienda 10: Negozio di Abbigliamento -->
+    <div class="company-card">
+      <img src="https://via.placeholder.com/250x150?text=Abbigliamento" alt="Negozio di Abbigliamento">
+      <div class="info">
+        <h3>Negozio di Abbigliamento</h3>
+        <p>Vesti il tuo stile con le ultime tendenze della moda.</p>
+        <a href="recensione.html?azienda=Negozio di Abbigliamento" class="company-box">Recensisci</a>
+      </div>
+    </div>
+
+  </div>
+
